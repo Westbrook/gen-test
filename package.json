@@ -8,12 +8,12 @@
     "prepages": "mkdir pages-dist && cp -r *.html *.js analysis.json bower_components demo test pages-dist/ && cd pages-dist/bower_components && mkdir gen-test && cd ../../ && cp *.html *.js pages-dist/bower_components/gen-test",
     "pages": "gh-pages -d pages-dist",
     "postpages": "rimraf pages-dist",
-    "release": "release-it"
+    "release": "release-it --config='config/.release-it.json'"
   },
   "dependencies": {
     "browser-sync": "^2.18.13",
     "gh-pages": "^1.0.0",
     "release-it": "^3.2.0"
   },
-  "version": "0.0.6"
+  "version": "0.0.7"
 }
