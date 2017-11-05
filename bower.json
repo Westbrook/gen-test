@@ -1,0 +1,22 @@
+{
+  "name": "gen-test",
+  "author": "Westbrook Johnson",
+  "version": "0.0.0",
+  "description": "nothing yet",
+  "private": true,
+  "license": "https://github.com/westbrook/gen-test/LICENSE",
+  "homepage": "https://github.com/westbrook/gen-test",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/westbrook/gen-test.git"
+  },
+  "dependencies": {
+    "polymer": "Polymer/polymer#^2.0.0"
+  },
+  "devDependencies": {
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^2.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "iron-component-page": "polymerelements/iron-component-page#^3.0.1"
+  }
+}
