@@ -1,7 +1,7 @@
 {
   "name": "gen-test",
   "author": "Westbrook Johnson",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "nothing yet",
   "private": true,
   "license": "https://github.com/westbrook/gen-test/LICENSE",
@@ -32,6 +32,11 @@
     "wtc.conf.json",
     "gulpfile.js",
     "yarn-error.log",
-    "analysis.json"
+    "analysis.json",
+    "index.html",
+    "README.md",
+    "package.json",
+    "package-lock.json",
+    "yarn.lock"
   ]
 }
