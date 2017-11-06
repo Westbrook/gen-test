@@ -8,7 +8,7 @@
     "prepages": "yarn analyze && mkdir pages-dist && cp -r bower_components/* pages-dist/ && mkdir pages-dist/gen-test && cp -r *.html *.js analysis.json demo test pages-dist/gen-test/",
     "pages": "gh-pages -d pages-dist",
     "postpages": "rimraf pages-dist",
-    "prerelese": "yarn pages",
+    "prerelease": "yarn pages",
     "release": "release-it --config='config/.release-it.json'"
   },
   "dependencies": {
@@ -16,5 +16,5 @@
     "gh-pages": "^1.0.0",
     "release-it": "^3.2.0"
   },
-  "version": "0.0.12"
+  "version": "0.0.13"
 }
