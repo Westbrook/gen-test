@@ -1,7 +1,7 @@
 {
   "name": "gen-test",
   "author": "Westbrook Johnson",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "nothing yet",
   "private": true,
   "license": "https://github.com/westbrook/gen-test/LICENSE",
@@ -18,5 +18,17 @@
     "web-component-tester": "Polymer/web-component-tester#^6.0.0",
     "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
     "iron-component-page": "polymerelements/iron-component-page#^3.0.1"
-  }
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "demo",
+    "implementation",
+    ".travis.yml",
+    ".github",
+    "wtc.conf.json",
+    "gulpfile.js"
+  ]
 }
