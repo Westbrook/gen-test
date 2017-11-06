@@ -39,7 +39,7 @@
       "git add"
     ],
     "*styles.html": [
-      "stylelint --fix",
+      "stylelint",
       "git add"
     ]
   }
