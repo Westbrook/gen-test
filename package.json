@@ -3,18 +3,47 @@
   "scripts": {
     "analyze": "polymer analyze > analysis.json",
     "sync": "browser-sync start --config 'config/bs-config.js'",
-    "preserve": "yarn sync & yarn analyze",
+    "preserve": "yarn analyze",
     "serve": "polymer serve",
-    "prepages": "yarn analyze && mkdir pages-dist && cp -r bower_components/* pages-dist/ && mkdir pages-dist/gen-test && cp -r *.html *.js analysis.json demo test pages-dist/gen-test/",
+    "prelive": "rimraf bower_components/gen-test && mkdir bower_components/gen-test && yarn copy bower_components/gen-test",
+    "live": "yarn analyze && yarn sync",
+    "copy": "cp -r *.html *.js analysis.json demo test",
+    "prepages": "yarn analyze && cp -r config/pages-dist pages-dist/ && cp -r bower_components/* pages-dist/ && mkdir pages-dist/gen-test && yarn copy pages-dist/gen-test/",
     "pages": "gh-pages -d pages-dist",
     "postpages": "rimraf pages-dist",
-    "prerelease": "yarn pages",
-    "release": "release-it --config='config/.release-it.json'"
+    "release": "release-it --config='config/.release-it.json'",
+    "postrelease": "yarn pages",
+    "lint": "yarn lint:styles && yarn lint:polymer && yarn lint:js",
+    "lint:styles": "yarn stylelint *styles.html",
+    "lint:polymer": "polymer lint",
+    "lint:js": "yarn eslint . --fix",
+    "precommit": "lint-staged"
   },
   "dependencies": {
+    "babel-eslint": "^8.0.1",
     "browser-sync": "^2.18.13",
+    "eslint": "^4.10.0",
+    "eslint-config-google": "^0.9.1",
     "gh-pages": "^1.0.0",
-    "release-it": "^3.2.0"
+    "lint-staged": "^4.3.0",
+    "release-it": "^3.2.0",
+    "stylelint": "^8.2.0",
+    "stylelint-config-standard": "^17.0.0",
+    "stylelint-processor-html": "^1.0.0"
   },
-  "version": "0.0.13"
+  "version": "0.0.13",
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ],
+    "*styles.html": [
+      "stylelint --fix",
+      "git add"
+    ]
+  },
 }

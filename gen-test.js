@@ -7,20 +7,45 @@
  * @demo demo/index.html
  */
 class GenTest extends Polymer.Element {
-  static get is() { return 'gen-test'; }
+  /**
+   * Element name to be used in the DOM
+   * and for template finding
+   *
+   * @return {string}
+   */
+  static get is() {
+    return 'gen-test';
+  }
+  /**
+   * Properties to be made available
+   * and their configurations
+   */
   static get properties() {
     return {
       newProp: {
-        type: String
+        type: String,
       },
       /**
        * Property that updates on demand in the browser-sync
        */
       anotherProp: {
         type: Boolean,
-        value: false
-      }
+        value: false,
+      },
+      getExcited: {
+        type: String,
+        value: 'very exited!',
+      },
     };
+  }
+  /**
+   * My cool method
+   * @param {string} property
+   *
+   * @return {string}
+   */
+  methodName(property) {
+    return `${property} name`;
   }
 };
 

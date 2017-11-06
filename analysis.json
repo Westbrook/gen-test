@@ -803,6 +803,26 @@
             "polymer": {}
           },
           "defaultValue": "false"
+        },
+        {
+          "name": "getExcited",
+          "type": "string",
+          "description": "",
+          "privacy": "public",
+          "sourceRange": {
+            "start": {
+              "line": 22,
+              "column": 6
+            },
+            "end": {
+              "line": 25,
+              "column": 7
+            }
+          },
+          "metadata": {
+            "polymer": {}
+          },
+          "defaultValue": "\"very exited!\""
         }
       ],
       "methods": [
@@ -3490,7 +3510,7 @@
           "column": 0
         },
         "end": {
-          "line": 24,
+          "line": 28,
           "column": 1
         }
       },
@@ -3529,6 +3549,22 @@
           },
           "metadata": {},
           "type": "boolean"
+        },
+        {
+          "name": "get-excited",
+          "description": "",
+          "sourceRange": {
+            "start": {
+              "line": 22,
+              "column": 6
+            },
+            "end": {
+              "line": 25,
+              "column": 7
+            }
+          },
+          "metadata": {},
+          "type": "string"
         }
       ],
       "events": [],
